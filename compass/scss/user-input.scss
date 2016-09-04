@@ -1,0 +1,81 @@
+$padding-horizontal : 5px;
+$activeColor        : #048BFC;
+$placeHoldColor     : #a4a2a7;
+
+@mixin transition($transition...) {
+  -webkit-transition: $transition;
+       -o-transition: $transition;
+          transition: $transition;
+}
+
+@mixin transform-origin($origin) {
+  -webkit-transform-origin: $origin;
+     -moz-transform-origin: $origin;
+      -ms-transform-origin: $origin; // IE9 only
+          transform-origin: $origin;
+}
+
+@mixin transform($origin) {
+  -webkit-transform: $origin;
+     -moz-transform: $origin;
+      -ms-transform: $origin; // IE9 only
+          transform: $origin;
+}
+
+.floating-placeholder{
+   line-height:2.6em;
+   height:2.6em;
+   margin:0;
+   padding:0;
+   width:100%;
+}
+
+.floating-placeholder {
+   position:relative;
+   &:not(.floating-placeholder-float) input:focus + label {
+       color: $activeColor;
+       left: 25px;
+   }
+}
+
+.floating-placeholder input{
+   border:none;
+   outline:none;
+   position:absolute;
+   top:0;
+   left:0;
+   display:block;
+   background:transparent;
+   width: 100%;
+   text-indent:$padding-horizontal;
+   padding:0!important;
+}
+
+.floating-placeholder label{
+   display:block;
+   position:absolute;
+   top:0;
+   left:$padding-horizontal;
+
+   @include transform-origin(0);
+   @include transition(transform 160ms, all 200ms);
+   @include transform(scale(1,1) rotateY(0));
+   font-weight: 400;
+   font-size: 16px;
+   color: $placeHoldColor;
+}
+
+
+.floating-placeholder-float {
+   margin-top: 8px;
+
+   label {
+       transform: scale(0.75, 0.75) rotateY(0);
+       margin-top: -14px;
+       color : $activeColor;
+   }
+
+   input {
+       padding: 5px 0!important;
+   }
+}

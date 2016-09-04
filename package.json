@@ -1,7 +1,7 @@
 {
   "name": "user-input",
-  "version": "0.0.0",
-  "description": "The default blueprint for ember-cli addons.",
+  "version": "0.1.0",
+  "description": "An input that features some really cool placeholder functionality.",
   "directories": {
     "doc": "doc",
     "test": "tests"
@@ -11,11 +11,18 @@
     "start": "ember server",
     "test": "ember try:testall"
   },
-  "repository": "",
+  "bugs": {
+    "url": "http://github.com/charliemitchell/user-input",
+    "email": "charliesemailis@gmail.com"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/charliemitchell/user-input.git"
+  },
   "engines": {
     "node": ">= 0.10.0"
   },
-  "author": "",
+  "author": "Charlie Mitchell <charliesemailis@gmail.com>",
   "license": "MIT",
   "devDependencies": {
     "broccoli-asset-rev": "^2.4.2",
@@ -40,10 +47,13 @@
     "loader.js": "^4.0.1"
   },
   "keywords": [
-    "ember-addon"
+    "ember-addon",
+    "input",
+    "input component"
   ],
   "dependencies": {
-    "ember-cli-babel": "^5.1.6"
+    "ember-cli-babel": "^5.1.6",
+    "ember-cli-htmlbars": "^0.7.4"
   },
   "ember-addon": {
     "configPath": "tests/dummy/config"

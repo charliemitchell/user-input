@@ -1,0 +1,72 @@
+/*
+   NEEDS COMPASS. If you don't have or want to use compass, you'll need to change
+      @include transform-origin(0);
+      @include transition(transform 160ms, all 200ms);
+      @include transform(scale(1,1) rotateY(0));
+*/
+
+$padding-horizontal : 5px;
+$labelColor : #ccc;
+$floatingLabelColor : #1565C0;
+
+.floating-placeholder {
+   line-height : 2.6rem;
+   height      : 2.6rem;
+   margin      : 0;
+   padding     : 0;
+   width       : 100%;
+}
+
+// .floating-placeholder input[value]+label{
+//     // color : $red;
+// }
+
+.floating-placeholder {
+   position:relative;
+   &:not(.floating-placeholder-float) input:focus + label {
+     color  : $floatingLabelColor;
+     left   : 25px;
+   }
+}
+
+.floating-placeholder input{
+   border     : none;
+   outline    : none;
+   position   : absolute;
+   top        : 0;
+   left       : 0;
+   display    : block;
+   background : transparent;
+   width      : 100%;
+   text-indent: $padding-horizontal;
+   padding    : 0!important;
+}
+
+.floating-placeholder label{
+   display    : block;
+   position   : absolute;
+   top        : 0;
+   left       : $padding-horizontal;
+   color      : $labelColor;
+   font-weight: 400;
+   font-size  : 1rem;
+   @include transform-origin(0);
+   @include transition(transform 160ms, all 200ms);
+   @include transform(scale(1,1) rotateY(0));
+}
+
+
+.floating-placeholder-float {
+
+   margin-top : 0.5rem;
+
+   label {
+      transform   : scale(0.75, 0.75) rotateY(0);
+      margin-top  : -14px;
+      color       : $floatingLabelColor;
+   }
+
+   input {
+      padding : 5px 0!important;
+   }
+}

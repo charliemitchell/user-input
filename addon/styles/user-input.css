@@ -1,0 +1,71 @@
+/* line 25, ../../compass/scss/user-input.scss */
+.floating-placeholder {
+  line-height: 2.6em;
+  height: 2.6em;
+  margin: 0;
+  padding: 0;
+  width: 100%;
+}
+
+/* line 33, ../../compass/scss/user-input.scss */
+.floating-placeholder {
+  position: relative;
+}
+/* line 35, ../../compass/scss/user-input.scss */
+.floating-placeholder:not(.floating-placeholder-float) input:focus + label {
+  color: #048BFC;
+  left: 25px;
+}
+
+/* line 41, ../../compass/scss/user-input.scss */
+.floating-placeholder input {
+  border: none;
+  outline: none;
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: block;
+  background: transparent;
+  width: 100%;
+  text-indent: 5px;
+  padding: 0 !important;
+}
+
+/* line 54, ../../compass/scss/user-input.scss */
+.floating-placeholder label {
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 5px;
+  -webkit-transform-origin: 0;
+  -moz-transform-origin: 0;
+  -ms-transform-origin: 0;
+  transform-origin: 0;
+  -webkit-transition: transform 160ms, all 200ms;
+  -o-transition: transform 160ms, all 200ms;
+  transition: transform 160ms, all 200ms;
+  -webkit-transform: scale(1, 1) rotateY(0);
+  -moz-transform: scale(1, 1) rotateY(0);
+  -ms-transform: scale(1, 1) rotateY(0);
+  transform: scale(1, 1) rotateY(0);
+  font-weight: 400;
+  font-size: 16px;
+  color: #a4a2a7;
+}
+
+/* line 69, ../../compass/scss/user-input.scss */
+.floating-placeholder-float {
+  margin-top: 8px;
+}
+/* line 72, ../../compass/scss/user-input.scss */
+.floating-placeholder-float label {
+  transform: scale(0.75, 0.75) rotateY(0);
+  margin-top: -14px;
+  color: #048BFC;
+}
+/* line 78, ../../compass/scss/user-input.scss */
+.floating-placeholder-float input {
+  padding: 5px 0 !important;
+}
+
+/*# sourceMappingURL=user-input.css.map */

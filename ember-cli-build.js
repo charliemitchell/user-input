@@ -5,6 +5,10 @@ var EmberAddon = require('ember-cli/lib/broccoli/ember-addon');
 module.exports = function(defaults) {
   var app = new EmberAddon(defaults, {
     // Add options here
+    included : function (app) {
+      this._super.included(app);
+      app.import('styles/user-input.css');
+    }
   });
 
   /*

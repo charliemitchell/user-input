@@ -1,0 +1,4 @@
+<div {{bind-attr class=":floating-placeholder bind_css float:floating-placeholder-float"}}>
+    {{input type=type id=inputId class=css value=value required=required tabindex=tabindex disabled=disabled error=errors}}
+    <label {{bind-attr for=inputId}}>{{label}} {{#if required}} * {{/if}}</label>
+</div>
