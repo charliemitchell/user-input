@@ -9,7 +9,7 @@
 /bower_components
 
 # misc
-/.sass-cache
+compass/.sass-cache
 /connect.lock
 /coverage/*
 /libpeerconnection.log
