@@ -2,12 +2,18 @@
 Here's a fun little input, with extra attention to user experience. The placeholder is actually a label, and behave in a simliar way to the material design paper-input. I took this a step further and made an input where the placeholder stays on the same field of view when you click on the input. Then after typing in it, it then moves above the input.
 
 ## What it looks like
+
 #### State One (Placeholding)
 <img src="/images/placehold.png" height="40px">
+
+
 #### State Two (:focus)
 <img src="/images/active.png" height="40px">
+
+
 #### State Three (Input Has Content)
 <img src="/images/content.png" height="50px">
+
 
 ## Usage
 ```
