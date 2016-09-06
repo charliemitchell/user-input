@@ -1,6 +1,6 @@
 {
   "name": "ember-user-input",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "description": "An input that features some really cool placeholder functionality.",
   "directories": {
     "doc": "doc",
